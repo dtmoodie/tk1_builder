@@ -1,3 +1,4 @@
 base/rootfs
 base/qemu-arm-static
 flasher/Tegra*
+archives
