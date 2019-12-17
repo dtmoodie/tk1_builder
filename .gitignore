@@ -1,4 +1,5 @@
-base/rootfs
-base/qemu-arm-static
+base/stage1/rootfs
+base/stage1/qemu-arm-static
+base/stage1/Tegra*
 flasher/Tegra*
 archives
