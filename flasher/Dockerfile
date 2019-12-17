@@ -16,4 +16,4 @@ COPY --from=deps / /jetpack/Linux_for_Tegra/rootfs
 WORKDIR /jetpack/Linux_for_Tegra
 RUN ./apply_binaries.sh
 
-ENTRYPOINT [ "./flash.sh", "-S", "14580MiB", "jetson-tk1", "mmcblk0p1" ]
+CMD [ "/bin/bash", "./flash.sh", "-S", "14580MiB", "jetson-tk1", "mmcblk0p1" ]
