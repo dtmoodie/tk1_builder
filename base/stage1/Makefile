@@ -6,7 +6,7 @@ unpack:
 	mkdir rootfs
 	sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R21.7.0_armhf.tbz2 --directory rootfs
 	cp /usr/bin/qemu-arm-static .
-	#rm Tegra_Linux_Sample-Root-Filesystem_R21.7.0_armhf.tbz2
+	rm Tegra_Linux_Sample-Root-Filesystem_R21.7.0_armhf.tbz2
 
 
 image:
