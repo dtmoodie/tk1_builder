@@ -1,0 +1,18 @@
+[submodule "gstreamer/stage1/src/gstreamer"]
+	path = gstreamer/stage1/src/gstreamer
+	url = https://gitlab.freedesktop.org/gstreamer/gstreamer
+[submodule "gstreamer/stage1/src/gst-plugins-bad"]
+	path = gstreamer/stage1/src/gst-plugins-bad
+	url = https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad
+[submodule "gstreamer/stage1/src/gst-plugins-good"]
+	path = gstreamer/stage1/src/gst-plugins-good
+	url = https://gitlab.freedesktop.org/gstreamer/gst-plugins-good
+[submodule "gstreamer/stage1/src/gst-plugins-base"]
+	path = gstreamer/stage1/src/gst-plugins-base
+	url = https://gitlab.freedesktop.org/gstreamer/gst-plugins-base
+[submodule "gstreamer/stage1/src/gst-plugins-ugly"]
+	path = gstreamer/stage1/src/gst-plugins-ugly
+	url = https://gitlab.freedesktop.org/gstreamer/gst-plugins-ugly
+[submodule "gstreamer/stage1/src/gst-omx-nvidia"]
+	path = gstreamer/stage1/src/gst-omx-nvidia
+	url = https://github.com/ystreet/gst-omx-nvidia
