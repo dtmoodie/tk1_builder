@@ -1,4 +1,5 @@
-from jetsontk1:base
+ARG build_from=jetson/tk1/base
+from ${build_from}
 WORKDIR /workspace
 
 COPY src src
