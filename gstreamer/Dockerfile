@@ -20,6 +20,8 @@ RUN apt-get install -y build-essential dpkg-dev \
   libwmf-bin \
   texlive-base-bin 
 
+RUN apt-get remove --purge gstreamer0.10-* gstreamer1.0-* libgstreamer* -y
+
 # this is for WebRTC
 RUN apt-get install -y \
   libnice-dev libneon27-gnutls-dev
@@ -38,9 +40,9 @@ RUN apt-get install -y libusb-dev libusb-1.0-0-dev libgudev-1.0-dev
 WORKDIR /workspace/src/gstreamer
 
 RUN ./autogen.sh && \
-    ./configure --prefix=/usr/local && \
-     make -j24 && \
-     make install
+  ./configure --prefix=/usr/local && \
+  make -j24 && \
+  make install
 
 WORKDIR /workspace/src/gst-plugins-base
 RUN ./autogen.sh
@@ -66,12 +68,8 @@ RUN ./autogen.sh
 RUN ./configure --prefix=/usr/local
 RUN make -j24 install
 
-WORKDIR /workspace/src/
-COPY egl_src_url egl_src_url
-RUN wget $(cat egl_src_url)
-RUN tar xvf l4t-Jetson*
 ENV EGL_LIBS=/usr/lib/arm-linux-gnuabihf/tegra-egl/libEGL.so
-WORKDIR /workspace/src/gstegl_src/gst-egl
+WORKDIR /workspace/gstegl_src/gst-egl
 RUN ./configure
 RUN  make -j24 install
 
@@ -79,5 +77,14 @@ WORKDIR /workspace/src/gst-omx-nvidia
 RUN ./autogen.sh --with-omx-target=tegra
 RUN make -j24 install
 
-
+# https://devtalk.nvidia.com/default/topic/1009988/jetson-tk1/building-hardware-accelerated-gstjpeg-from-source-/
+WORKDIR /workspace/gstjpeg_src/gst-jpeg/gst-jpeg-1.0
+#RUN apt-get install libjpeg-dev -y
+RUN apt-get install libjpeg-dev -y
+ENV CFLAGS="-I/workspace/gstjpeg_src/nv_headers -L/usr/lib/arm-linux-gnueabihf/tegra -DUSE_TARGET_TEGRA"
+ENV NOCONFIGURE=true
+RUN cp /workspace/gstjpeg_src/nv_headers/* /usr/local/include
+RUN ./autogen.sh
+RUN ./configure
+RUN make -j24 install
 
