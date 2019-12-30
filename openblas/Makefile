@@ -1,2 +1,2 @@
 all:
-	docker build -t jetsontk1_build:openblas .
+	docker build -t jetson/tk1/build/openblas .

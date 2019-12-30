@@ -1,4 +1,4 @@
-from jetsontk1:base
+from jetson/tk1/base
 
 WORKDIR /workspace
 RUN apt-get install -y gfortran-4.8
