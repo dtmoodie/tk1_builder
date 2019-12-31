@@ -1,6 +1,9 @@
 
 
 all:
-	(cd base/stage1; make unpack)
-	(cd base/stage1; make image)
-	(cd base/stage2; make)
+	(cd utils/jetpack; make)
+	(cd base; make)
+	(cd boost; make)
+	(cd openblas; make)
+	(cd gstreamer; make)
+	
