@@ -16,3 +16,9 @@
 [submodule "gstreamer/stage1/src/gst-omx-nvidia"]
 	path = gstreamer/stage1/src/gst-omx-nvidia
 	url = https://github.com/ystreet/gst-omx-nvidia
+[submodule "darknet/stage1/darknet"]
+	path = darknet/stage1/darknet
+	url = http://github.com/dtmoodie/darknet
+[submodule "dlib/stage1/dlib"]
+	path = dlib/stage1/dlib
+	url = http://github.com/dtmoodie/dlib
