@@ -2,3 +2,5 @@ base/stage0/qemu-arm-static
 base/stage0/Tegra*
 flasher/Tegra*
 archives
+base/stage1/cuda-*
+darknet/stage1/cudnn*
