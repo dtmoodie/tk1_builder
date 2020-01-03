@@ -22,3 +22,9 @@
 [submodule "dlib/stage1/dlib"]
 	path = dlib/stage1/dlib
 	url = http://github.com/dtmoodie/dlib
+[submodule "opencv/stage1/opencv"]
+	path = opencv/stage1/opencv
+	url = http://github.com/opencv/opencv
+[submodule "opencv/stage1/opencv_contrib"]
+	path = opencv/stage1/opencv_contrib
+	url = http://github.com/opencv/opencv_contrib
