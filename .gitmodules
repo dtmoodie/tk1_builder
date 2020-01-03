@@ -28,3 +28,12 @@
 [submodule "opencv/stage1/opencv_contrib"]
 	path = opencv/stage1/opencv_contrib
 	url = http://github.com/opencv/opencv_contrib
+[submodule "ros/stage1/console_bridge"]
+	path = ros/stage1/console_bridge
+	url = https://github.com/ros/console_bridge
+[submodule "ros/stage1/tinyxml2"]
+	path = ros/stage1/tinyxml2
+	url = https://github.com/leethomason/tinyxml2
+[submodule "ros/stage1/common_msgs"]
+	path = ros/stage1/common_msgs
+	url = http://github.com/ros/common_msgs
