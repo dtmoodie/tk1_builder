@@ -7,4 +7,4 @@ ARG from
 
 FROM ${from}
 
-COPY --from=deps /usr/local/lib/* /usr/local/lib/
+COPY --from=deps /usr/local/lib/ /usr/local/lib/
