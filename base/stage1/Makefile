@@ -2,4 +2,5 @@
 #  download sample root file system
 #  jetson tk1 32bit driver package
 all:
+	cp ../../archives/cuda* .
 	docker build -t jetson/tk1/base .
