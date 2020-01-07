@@ -6,4 +6,6 @@ all:
 	(cd boost; make)
 	(cd openblas; make)
 	(cd gstreamer; make)
-	
+	(cd opencv; make)
+	(cd darknet; make)
+	(cd ros; make)

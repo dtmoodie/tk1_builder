@@ -37,3 +37,9 @@
 [submodule "ros/stage1/common_msgs"]
 	path = ros/stage1/common_msgs
 	url = http://github.com/ros/common_msgs
+[submodule "ros/stage1/poco"]
+	path = ros/stage1/poco
+	url = https://github.com/pocoproject/poco
+[submodule "ros/stage1/lz4"]
+	path = ros/stage1/lz4
+	url = https://github.com/lz4/lz4

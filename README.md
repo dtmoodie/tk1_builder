@@ -2,3 +2,15 @@ This project is for building jetson tk1 root filesystems using docker, and then 
 
 Usage:
 - Download Tegra_Linux_Sample-Root-Filesystem_R21.7.0_armhf.tbz2 and Tegra124_Linux_R21.7.0_armhf.tbz2 to the archives folder from https://developer.nvidia.com/linux-tegra-r217
+
+
+
+Layering order:
+base
+boost
+openblas
+gstreamer
+opencv
+darknet
+dlib
+ros
