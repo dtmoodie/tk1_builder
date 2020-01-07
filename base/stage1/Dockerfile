@@ -19,3 +19,4 @@ RUN wget https://github.com/Kitware/CMake/archive/v3.14.7.tar.gz && tar xvf v3.1
 
 RUN cd CMake* && ./bootstrap --prefix=/usr/local && make -j24&& make install
 
+COPY sources.list /etc/apt/sources.list
