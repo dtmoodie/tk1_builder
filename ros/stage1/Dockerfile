@@ -39,7 +39,7 @@ WORKDIR /workspace
 COPY --from=deps /workspace/src /workspace/src 
 COPY common_msgs /workspace/src/common_msgs
 
-RUN apt-get install -y libpython2.7-dev libpython3.4-dev libgpgme11-dev libssl-dev
+RUN apt-get install -y libpython2.7-dev libpython3.4-dev libgpgme11-dev libssl-dev libbz2-1.0 bzip2 libbz2-dev libzip-dev libzip2
 
 # these are updated libraries for newer boost without boost::signals
 COPY roscpp  /workspace/src/ros_comm/roscpp
