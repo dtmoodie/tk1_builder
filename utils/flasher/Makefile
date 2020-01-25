@@ -1,8 +1,6 @@
 image:
-	docker build -t jetsontk1:flasher . \
-		--build-arg root_from=jetsontk1:base \
-		--build-arg from=ubuntu:16.04
-
+	docker build -t jetson/tk1/flasher . \
+		--build-arg root_from=jetson/tk1/deploy
 
 flash:
-	docker run --privileged jetsontk1:flasher
+	docker run --privileged jetson/tk1/flasher
