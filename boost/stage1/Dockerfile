@@ -12,5 +12,6 @@ RUN ./b2 cxxflags="-std=c++1y" \
     threading=multi \
     variant=release \
     link=shared \
-    --reconfigure
+    --reconfigure \
+    -j 24
 
