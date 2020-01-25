@@ -43,3 +43,15 @@
 [submodule "ros/stage1/lz4"]
 	path = ros/stage1/lz4
 	url = https://github.com/lz4/lz4
+[submodule "base/stage0/qemu"]
+	path = base/stage0/qemu
+	url = https://github.com/qemu/qemu
+[submodule "utils/qemu/qemu"]
+	path = utils/qemu/qemu
+	url = https://github.com/qemu/qemu
+[submodule "utils/gcc/gcc"]
+	path = utils/gcc/gcc
+	url = https://github.com/gcc-mirror/gcc
+[submodule "eagleeye/stage1/eagleeye"]
+	path = eagleeye/stage1/eagleeye
+	url = http://gitlab.com/dtmoodie/eagleeye
