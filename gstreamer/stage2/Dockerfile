@@ -36,4 +36,4 @@ RUN apt-get install -y \
 # for uvch264src
 RUN apt-get install -y libusb-dev libusb-1.0-0-dev libgudev-1.0-dev
 
-RUN apt-get remove --purge gstreamer* libgstreamer* gir1.2-gstreamer-1.0 -y
+#RUN apt-get remove --purge gstreamer* libgstreamer* gir1.2-gstreamer-1.0 -y

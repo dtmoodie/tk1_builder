@@ -21,8 +21,6 @@ RUN apt-get install -y build-essential dpkg-dev \
   libwmf-bin \
   texlive-base-bin 
 
-RUN apt-get remove --purge gstreamer0.10-* gstreamer1.0-* libgstreamer* gir1.2-gstreamer-1.0 -y
-
 # this is for WebRTC
 RUN apt-get install -y \
   libnice-dev libneon27-gnutls-dev
