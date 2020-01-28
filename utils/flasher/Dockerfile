@@ -6,5 +6,9 @@ FROM jetson/tk1/jetpack
 COPY --from=deps / /jetpack/Linux_for_Tegra/rootfs
 
 WORKDIR /jetpack/Linux_for_Tegra
+COPY flash /jetpack/Linux_for_Tegra
+COPY get_ip_1804 /jetpack/Linux_for_Tegra
+RUN apt-get install net-tools
 
-CMD [ "/bin/bash", "./flash.sh", "-S", "14580MiB", "jetson-tk1", "mmcblk0p1" ]
+ENTRYPOINT ["./flash"]
+CMD ["dev"]
