@@ -8,6 +8,6 @@ COPY eagleeye /workspace/eagleeye
 WORKDIR /workspace/eagleeye/build
 RUN apt-get update
 RUN apt-get install -y libeigen3-dev libpython-dev libpython3-dev python python3
-RUN cmake .. -DBUILD_TESTS=OFF
+RUN source /opt/ros/melodic/setup.bash && cmake .. -DBUILD_TESTS=OFF
 RUN make -j24
-RUN make install
+RUN source /opt/ros/melodic/setup.bash && make install
