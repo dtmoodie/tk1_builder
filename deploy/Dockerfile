@@ -11,8 +11,15 @@ RUN mv /home/ubuntu/tegrastats /usr/bin/tegrastats
 
 RUN apt-get install -y ipython nano
 
-RUN echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib:/usr/local/lib" > /home/ubuntu/.bashrc
+COPY ld .
+RUN cat ld  > /home/ubuntu/.bashrc
 RUN ldconfig
 
+COPY run /home/ubuntu/
+COPY --chown=ubuntu:ubuntu facedb /home/ubuntu/facedb
+COPY --chown=ubuntu:ubuntu yolo_face /home/ubuntu/yolo_face
+COPY --chown=ubuntu:ubuntu get_ip /home/ubuntu/
 
-
+# run on first boot
+COPY firstboot /etc/rc.local
+COPY rc.local /home/ubuntu/rc.local
