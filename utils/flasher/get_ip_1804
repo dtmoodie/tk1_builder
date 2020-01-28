@@ -1,0 +1,4 @@
+#!/bin/bash
+NAME=${1:-enp5s0}
+
+ifconfig $NAME | grep "inet " | awk -F' ' '{print $2}'
