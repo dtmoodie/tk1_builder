@@ -1,0 +1,11 @@
+#!/bin/bash
+
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+chown root:root swapfile
+mkswap swapfile
+
+mv /home/ubuntu/rc.local /etc/rc.local
+
+/etc/rc.local
+exit 0

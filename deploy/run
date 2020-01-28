@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sudo maxperf
+cd /usr/local/lib
+source /opt/ros/melodic/setup.bash
+export ROS_MASTER_URI=http://overlord:11311
+export ROS_IP=$(/home/ubuntu/get_ip eth0)
+export HOSTNAME=$(hostname)
+ipython -i -c '%run door_face.py --detector=YOLO --model_dir=/home/ubuntu/yolo_face --face_landmark_dir=/usr/local/share/aqdlib --identities=/home/ubuntu/facedb node_name=$HOSTNAME'
